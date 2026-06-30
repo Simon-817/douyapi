@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>豆芽Pi v1.0 运营后台</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-app">
+  <main id="admin-dashboard" class="admin-page" aria-label="豆芽Pi 运营后台用户管理">
+    <aside class="admin-sidebar">
+      <img src="assets/brand/logo-lockup.png" alt="豆芽Pi Logo" class="admin-logo">
+      <span class="version-pill">v1.0 MVP</span>
+      <nav>
+        <button class="side-item is-active"><img src="assets/icons/profile.png" alt="">用户管理</button>
+        <button class="side-item"><img src="assets/icons/redeem.png" alt="">兑换码</button>
+        <button class="side-item"><img src="assets/icons/template-grid.png" alt="">生成记录</button>
+        <button class="side-item"><img src="assets/icons/settings.png" alt="">系统设置</button>
+      </nav>
+      <img src="assets/mascot/love.png" alt="豆芽Pi 吉祥物" class="sidebar-mascot">
+    </aside>
+
+    <section class="admin-main">
+      <header class="admin-card admin-title">
+        <div>
+          <span class="eyebrow">运营后台</span>
+          <h1>用户列表</h1>
+        </div>
+        <img src="assets/brand/mascot-logo.png" alt="豆芽Pi 后台">
+      </header>
+
+      <div class="metric-grid">
+        <article class="metric-card"><img src="assets/decorations/clover.png" alt=""><span>今日生成</span><strong>128</strong></article>
+        <article class="metric-card"><img src="assets/mascot/success.png" alt=""><span>生成成功率</span><strong>96.8%</strong></article>
+        <article class="metric-card"><img src="assets/icons/alert.png" alt=""><span>次数不足</span><strong id="quota-alert-count">23</strong></article>
+        <article class="metric-card"><img src="assets/icons/redeem.png" alt=""><span>兑换成功</span><strong>41</strong></article>
+      </div>
+
+      <div class="admin-card filters">
+        <label>
+          <span>按 wxid 精确查询</span>
+          <input id="admin-wxid" type="search" placeholder="请输入 wxid">
+        </label>
+        <label>
+          <span>按昵称模糊查询</span>
+          <input id="admin-name" type="search" placeholder="请输入昵称">
+        </label>
+        <button class="btn btn-primary compact-btn" data-action="admin-search">查询</button>
+        <button class="btn btn-secondary compact-btn" data-action="admin-reset">重置</button>
+      </div>
+
+      <div class="admin-grid">
+        <div class="admin-card table-card">
+          <div class="table-header">
+            <span>用户</span>
+            <span>wxid</span>
+            <span>今日</span>
+            <span>额外</span>
+            <span>累计</span>
+            <span>操作</span>
+          </div>
+          <div id="admin-users" class="user-list"></div>
+        </div>
+
+        <div class="admin-card add-panel">
+          <h2>增加生成次数</h2>
+          <div id="selected-user" class="selected-user"></div>
+          <span class="field-label">选择增加次数</span>
+          <div class="add-counts">
+            <button class="count-chip is-active" data-count="1">+1 次</button>
+            <button class="count-chip" data-count="2">+2 次</button>
+            <button class="count-chip" data-count="5">+5 次</button>
+            <button class="count-chip" data-count="10">+10 次</button>
+            <button class="count-chip" data-count="20">+20 次</button>
+          </div>
+          <label class="field-block admin-note">
+            <span>填写备注（可选）</span>
+            <textarea id="admin-note" maxlength="100" placeholder="请输入备注信息"></textarea>
+          </label>
+          <button class="btn btn-primary full" data-action="admin-add-count">确认增加</button>
+        </div>
+      </div>
+
+      <div class="admin-card tracking-card">
+        <h2>核心埋点</h2>
+        <div id="event-log" class="event-log">
+          <span>douya_home_view</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <img src="assets/mascot/success.png" alt="">
+    <span>已更新</span>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

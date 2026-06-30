@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>豆芽Pi v1.0 小程序前端</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="mini-program-app">
+  <main class="mini-app-shell" aria-label="豆芽Pi 小程序前端">
+    <section id="screen-home" class="screen mini-screen is-active" data-screen="home">
+      <header class="home-brand top-brand-row">
+        <img src="assets/brand/mascot-logo.png" alt="豆芽Pi Logo" class="home-brand-icon">
+        <div>
+          <img src="assets/brand/logo-lockup.png" alt="豆芽Pi" class="home-logo">
+          <p>拼豆图纸AI生成器</p>
+        </div>
+      </header>
+
+      <button class="home-upload-card" type="button" data-action="upload-image" data-event="douya_image_upload_click" id="upload-card">
+        <span class="upload-inner">
+          <img src="assets/icons/image.png" alt="上传图片">
+          <strong>点击上传图片</strong>
+          <em>支持相册和拍照</em>
+        </span>
+        <img src="assets/decorations/clover.png" alt="" class="upload-deco clover">
+        <img src="assets/decorations/heart.png" alt="" class="upload-deco heart">
+      </button>
+
+      <section class="home-panel size-panel">
+        <h2><img src="assets/brand/mascot-logo.png" alt="">选择拼豆尺寸</h2>
+        <div class="size-grid home-size-grid" id="size-options">
+          <button class="size-option is-active" data-size="52" data-event="douya_preset_size_select">52格</button>
+          <button class="size-option" data-size="78" data-event="douya_preset_size_select">78格</button>
+          <button class="size-option" data-size="104" data-event="douya_preset_size_select">104格</button>
+          <span class="custom-size-wrapper" id="custom-size-wrapper">
+            <button class="size-option custom-trigger" data-size="custom" type="button">自定义</button>
+            <label class="custom-size-field" aria-label="自定义拼豆尺寸">
+              <input id="custom-size" class="custom-size" type="text" pattern="[0-9]*" maxlength="3" aria-label="输入8到104格的拼豆尺寸" inputmode="numeric">
+              <span class="custom-size-placeholder">8~104格</span>
+            </label>
+          </span>
+        </div>
+      </section>
+
+      <section class="home-panel quota-panel">
+        <div class="quota-summary">
+          <div>
+            <img src="assets/decorations/heart.png" alt="">
+            <strong><span class="quota-label">今日免费</span><span><b id="free-count" class="quota-number">1</b> 次</span></strong>
+          </div>
+          <span class="quota-divider"></span>
+          <div>
+            <img src="assets/decorations/clover.png" alt="">
+            <strong><span class="quota-label">额外次数</span><span><b id="extra-count" class="quota-number">0</b> 次</span></strong>
+          </div>
+        </div>
+        <button class="redeem-row" type="button" data-action="open-redeem" data-event="douya_redeem_entry_click">
+          <img src="assets/icons/redeem.png" alt="">
+          <span>兑换码</span>
+          <strong>›</strong>
+        </button>
+      </section>
+
+      <section class="style-options" aria-label="风格选择">
+        <button id="cartoon-style-toggle" class="style-card" type="button" role="checkbox" aria-checked="false" data-action="toggle-cartoon-style" data-event="douya_cartoon_style_toggle">
+          <img class="style-option-icon" src="assets/icons/cartoon-checkbox-unchecked.png" alt="">
+          <span>卡通风格</span>
+          <img id="cartoon-style-icon" class="style-selected-icon" src="assets/icons/cartoon-checkbox-checked.png" alt="">
+        </button>
+      </section>
+
+      <button id="generate-button" class="home-generate-button" data-action="start-generation" data-event="douya_generate_click">
+        <img src="assets/brand/mascot-logo.png" alt="">
+        <span>立即生成</span>
+      </button>
+      <p class="save-reminder"><img src="assets/decorations/heart.png" alt="">生成后请及时保存</p>
+    </section>
+
+    <section id="screen-profile" class="screen mini-screen profile-screen" data-screen="profile">
+      <header class="profile-header">
+        <h1>我的</h1>
+      </header>
+
+      <section class="profile-card">
+        <img src="assets/brand/app-icon.png" alt="豆芽头像" class="profile-avatar">
+        <strong>豆芽4826</strong>
+        <img src="assets/decorations/heart.png" alt="" class="profile-heart">
+      </section>
+
+      <section class="profile-count-card">
+        <div>
+          <span>今日免费次数</span>
+          <strong id="profile-free-count">1</strong>
+        </div>
+        <span class="quota-divider"></span>
+        <div>
+          <span>额外次数</span>
+          <strong id="profile-extra-count">0</strong>
+        </div>
+      </section>
+
+      <section class="profile-redeem-card">
+        <img src="assets/icons/redeem.png" alt="">
+        <div>
+          <h2>兑换码</h2>
+          <p>输入兑换码获取次数</p>
+        </div>
+        <button type="button" data-action="open-redeem" data-event="douya_redeem_entry_click">去兑换 ›</button>
+      </section>
+
+      <section class="profile-notice">
+        <img src="assets/decorations/heart.png" alt="">
+        <span>目前暂不保存历史作品，生成后请及时保存</span>
+        <img src="assets/mascot/idle.png" alt="" class="notice-mascot">
+      </section>
+    </section>
+
+    <section id="screen-generating" class="screen mini-screen center-screen" data-screen="generating">
+      <div class="screen-header compact">
+        <h1>生成中</h1>
+      </div>
+      <img src="assets/mascot/generating.png" alt="豆芽Pi 正在生成" class="large-mascot">
+      <div class="bead-progress" aria-label="生成进度">
+        <span class="bead-fill" id="progress-fill"></span>
+      </div>
+      <h2 id="progress-title">AI 正在摆放拼豆 · 0%</h2>
+      <p>正在进行像素化、颜色映射与格子编号，请保持页面打开。</p>
+      <button class="btn btn-secondary" type="button" data-action="cancel-generation">取消生成</button>
+    </section>
+
+    <section id="screen-result" class="screen mini-screen" data-screen="result">
+      <div class="screen-header compact">
+        <button class="icon-button" type="button" data-action="go-home" aria-label="返回首页">‹</button>
+        <h1>生成结果</h1>
+      </div>
+      <div class="result-layout">
+        <button class="bead-preview" type="button" data-action="open-image-preview" data-event="douya_result_preview_zoom_click" aria-label="查看拼豆大图">
+          <img src="assets/decorations/pegboard-heart.png" alt="拼豆预览图">
+        </button>
+        <div class="result-stats">
+          <div><span>尺寸</span><strong id="result-size">52 x 52</strong></div>
+          <div><span>颜色数量</span><strong>12 色</strong></div>
+        </div>
+      </div>
+      <div class="warning-strip">本期暂不保存历史作品，请及时下载保存。</div>
+      <div class="action-row">
+        <button class="btn btn-secondary" type="button" data-action="go-home" data-event="douya_regenerate_click">重新生成</button>
+        <button class="btn btn-save" type="button" data-action="save-result" data-event="douya_grid_image_download_click">
+          <img src="assets/icons/download.png" alt="">
+          <span>保存到相册</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="screen-errors" class="screen mini-screen" data-screen="errors">
+      <div class="screen-header compact">
+        <button class="icon-button" type="button" data-action="go-home" aria-label="返回首页">‹</button>
+        <h1>异常与重试</h1>
+      </div>
+      <div class="error-grid">
+        <button class="error-card" data-error="upload"><img src="assets/icons/upload.png" alt=""><strong>图片上传失败</strong><span>图片上传失败，请重新上传</span></button>
+        <button class="error-card" data-error="blur"><img src="assets/icons/image.png" alt=""><strong>图片不清晰</strong><span>图片清晰度不足，请更换更清晰的图片后重试</span></button>
+        <button class="error-card" data-error="risk"><img src="assets/icons/alert.png" alt=""><strong>内容风险</strong><span>当前图片暂不支持生成，请更换图片后重试</span></button>
+        <button class="error-card" data-error="quota"><img src="assets/icons/redeem.png" alt=""><strong>次数不足</strong><span>今日免费生成次数已用完，可使用兑换码增加次数</span></button>
+        <button class="error-card" data-error="timeout"><img src="assets/decorations/magic-wand.png" alt=""><strong>生成超时</strong><span>生成时间较长，请稍后重试</span></button>
+        <button class="error-card" data-error="save"><img src="assets/icons/download.png" alt=""><strong>保存失败</strong><span>保存失败，请检查相册权限后重试</span></button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar mini-tabbar two-tabbar" aria-label="底部导航">
+    <button class="tab-item is-active" data-action="go-home"><img src="assets/icons/home.png" alt=""><span>首页</span></button>
+    <button class="tab-item" data-action="show-profile"><img src="assets/brand/mascot-logo.png" alt=""><span>我的</span></button>
+  </nav>
+
+  <div class="modal-backdrop" id="redeem-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="redeem-title">
+      <button class="modal-close" type="button" data-action="close-redeem" aria-label="关闭">×</button>
+      <img src="assets/mascot/love.png" alt="兑换码" class="modal-mascot">
+      <h2 id="redeem-title">兑换码</h2>
+      <p>输入兑换码后可增加生成次数</p>
+      <input id="redeem-input" type="text" placeholder="请输入兑换码">
+      <div class="action-row">
+        <button class="btn btn-secondary" type="button" data-action="close-redeem">取消</button>
+        <button class="btn btn-primary" type="button" data-action="submit-redeem" data-event="douya_redeem_submit">确认兑换</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-preview-modal" id="image-preview-modal" aria-hidden="true">
+    <button class="image-preview-close" type="button" data-action="close-image-preview" aria-label="关闭大图">×</button>
+    <div class="image-preview-stage" id="image-preview-stage">
+      <img id="image-preview-img" src="assets/decorations/pegboard-heart.png" alt="拼豆大图预览">
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <img src="assets/mascot/success.png" alt="">
+    <span>已保存到相册</span>
+  </div>
+  <img src="assets/icons/upload-close.png" alt="" class="preload-asset" aria-hidden="true">
+
+  <script src="mini-program.js"></script>
+</body>
+</html>

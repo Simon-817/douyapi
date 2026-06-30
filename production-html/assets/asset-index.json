@@ -1,0 +1,282 @@
+[
+  {
+    "category": "brand",
+    "name": "logo-lockup",
+    "file": "production-assets/brand/logo-lockup.png",
+    "size": "128x51",
+    "usage": "豆芽Pi Logo 字标"
+  },
+  {
+    "category": "brand",
+    "name": "mascot-logo",
+    "file": "production-assets/brand/mascot-logo.png",
+    "size": "96x113",
+    "usage": "豆芽 IP Logo 形象"
+  },
+  {
+    "category": "brand",
+    "name": "app-icon",
+    "file": "production-assets/brand/app-icon.png",
+    "size": "106x96",
+    "usage": "微信小程序应用图标参考"
+  },
+  {
+    "category": "icons",
+    "name": "home",
+    "file": "production-assets/icons/home.png",
+    "size": "52x56",
+    "usage": "首页"
+  },
+  {
+    "category": "icons",
+    "name": "generate",
+    "file": "production-assets/icons/generate.png",
+    "size": "47x48",
+    "usage": "生成"
+  },
+  {
+    "category": "icons",
+    "name": "template-grid",
+    "file": "production-assets/icons/template-grid.png",
+    "size": "34x45",
+    "usage": "图纸/模板"
+  },
+  {
+    "category": "icons",
+    "name": "upload",
+    "file": "production-assets/icons/upload.png",
+    "size": "39x46",
+    "usage": "上传"
+  },
+  {
+    "category": "icons",
+    "name": "download",
+    "file": "production-assets/icons/download.png",
+    "size": "42x46",
+    "usage": "下载/保存"
+  },
+  {
+    "category": "icons",
+    "name": "share",
+    "file": "production-assets/icons/share.png",
+    "size": "34x45",
+    "usage": "分享"
+  },
+  {
+    "category": "icons",
+    "name": "settings",
+    "file": "production-assets/icons/settings.png",
+    "size": "36x45",
+    "usage": "设置"
+  },
+  {
+    "category": "icons",
+    "name": "image",
+    "file": "production-assets/icons/image.png",
+    "size": "43x42",
+    "usage": "图片"
+  },
+  {
+    "category": "icons",
+    "name": "redeem",
+    "file": "production-assets/icons/redeem.png",
+    "size": "39x45",
+    "usage": "兑换码"
+  },
+  {
+    "category": "icons",
+    "name": "profile",
+    "file": "production-assets/icons/profile.png",
+    "size": "35x47",
+    "usage": "我的/用户"
+  },
+  {
+    "category": "icons",
+    "name": "alert",
+    "file": "production-assets/icons/alert.png",
+    "size": "39x46",
+    "usage": "提示/警告"
+  },
+  {
+    "category": "icons",
+    "name": "favorite-heart",
+    "file": "production-assets/icons/favorite-heart.png",
+    "size": "40x44",
+    "usage": "喜欢/收藏"
+  },
+  {
+    "category": "mascot",
+    "name": "idle",
+    "file": "production-assets/mascot/idle.png",
+    "size": "95x98",
+    "usage": "待机/默认状态"
+  },
+  {
+    "category": "mascot",
+    "name": "uploading",
+    "file": "production-assets/mascot/uploading.png",
+    "size": "92x98",
+    "usage": "上传中状态"
+  },
+  {
+    "category": "mascot",
+    "name": "generating",
+    "file": "production-assets/mascot/generating.png",
+    "size": "109x104",
+    "usage": "生成中状态"
+  },
+  {
+    "category": "mascot",
+    "name": "success",
+    "file": "production-assets/mascot/success.png",
+    "size": "98x99",
+    "usage": "生成成功状态"
+  },
+  {
+    "category": "mascot",
+    "name": "failed",
+    "file": "production-assets/mascot/failed.png",
+    "size": "88x103",
+    "usage": "生成失败状态"
+  },
+  {
+    "category": "mascot",
+    "name": "love",
+    "file": "production-assets/mascot/love.png",
+    "size": "101x101",
+    "usage": "送心状态"
+  },
+  {
+    "category": "mascot",
+    "name": "celebration",
+    "file": "production-assets/mascot/celebration.png",
+    "size": "105x106",
+    "usage": "庆祝状态"
+  },
+  {
+    "category": "decorations",
+    "name": "pegboard-heart",
+    "file": "production-assets/decorations/pegboard-heart.png",
+    "size": "137x112",
+    "usage": "爱心拼豆板"
+  },
+  {
+    "category": "decorations",
+    "name": "pegboard-empty",
+    "file": "production-assets/decorations/pegboard-empty.png",
+    "size": "120x112",
+    "usage": "空拼豆板"
+  },
+  {
+    "category": "decorations",
+    "name": "beads-group",
+    "file": "production-assets/decorations/beads-group.png",
+    "size": "105x95",
+    "usage": "拼豆颗粒组"
+  },
+  {
+    "category": "decorations",
+    "name": "tweezers",
+    "file": "production-assets/decorations/tweezers.png",
+    "size": "128x99",
+    "usage": "镊子"
+  },
+  {
+    "category": "decorations",
+    "name": "magic-wand",
+    "file": "production-assets/decorations/magic-wand.png",
+    "size": "90x85",
+    "usage": "魔法棒"
+  },
+  {
+    "category": "decorations",
+    "name": "clover",
+    "file": "production-assets/decorations/clover.png",
+    "size": "58x66",
+    "usage": "四叶草"
+  },
+  {
+    "category": "decorations",
+    "name": "heart",
+    "file": "production-assets/decorations/heart.png",
+    "size": "58x56",
+    "usage": "爱心"
+  },
+  {
+    "category": "decorations",
+    "name": "star",
+    "file": "production-assets/decorations/star.png",
+    "size": "49x63",
+    "usage": "星星"
+  },
+  {
+    "category": "decorations",
+    "name": "bow",
+    "file": "production-assets/decorations/bow.png",
+    "size": "69x60",
+    "usage": "蝴蝶结"
+  },
+  {
+    "category": "decorations",
+    "name": "border-corner-red",
+    "file": "production-assets/decorations/border-corner-red.png",
+    "size": "87x74",
+    "usage": "红色拼豆角标"
+  },
+  {
+    "category": "decorations",
+    "name": "border-corner-yellow",
+    "file": "production-assets/decorations/border-corner-yellow.png",
+    "size": "80x74",
+    "usage": "黄色拼豆角标"
+  },
+  {
+    "category": "decorations",
+    "name": "border-corner-green",
+    "file": "production-assets/decorations/border-corner-green.png",
+    "size": "72x73",
+    "usage": "绿色拼豆角标"
+  },
+  {
+    "category": "decorations",
+    "name": "border-corner-blue",
+    "file": "production-assets/decorations/border-corner-blue.png",
+    "size": "71x73",
+    "usage": "蓝色拼豆角标"
+  },
+  {
+    "category": "decorations",
+    "name": "border-corner-mixed",
+    "file": "production-assets/decorations/border-corner-mixed.png",
+    "size": "86x73",
+    "usage": "混色拼豆角标"
+  },
+  {
+    "category": "decorations",
+    "name": "bead-divider",
+    "file": "production-assets/decorations/bead-divider.png",
+    "size": "32x76",
+    "usage": "拼豆竖向分隔"
+  },
+  {
+    "category": "decorations",
+    "name": "frame-pink-square",
+    "file": "production-assets/decorations/frame-pink-square.png",
+    "size": "80x75",
+    "usage": "粉色方形边框"
+  },
+  {
+    "category": "decorations",
+    "name": "frame-pink-bow",
+    "file": "production-assets/decorations/frame-pink-bow.png",
+    "size": "120x81",
+    "usage": "粉色蝴蝶结边框"
+  },
+  {
+    "category": "decorations",
+    "name": "frame-brown-square",
+    "file": "production-assets/decorations/frame-brown-square.png",
+    "size": "100x83",
+    "usage": "棕色方形边框"
+  }
+]
