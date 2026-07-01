@@ -1269,7 +1269,7 @@ body.mini-program-app {
   padding: 0;
   color: var(--green-500);
   background: transparent;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   text-align: left;
   caret-color: var(--green-500);

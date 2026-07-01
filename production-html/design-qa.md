@@ -42,7 +42,7 @@ Browser smoke results:
 - Home size title `选择拼豆尺寸` uses 16px text.
 - Home size presets are limited to `52格`, `78格`, and `104格`; default selection is `52格`.
 - The default `自定义` control uses the same unfilled style as inactive preset sizes.
-- Tapping `自定义` replaces the custom button with a text input; the cursor appears to the left of the visible `8~104格` hint and native number steppers are not used.
+- Tapping `自定义` replaces the custom button with a 16px text input; the cursor appears to the left of the visible `8~104格` hint, native number steppers are not used, and mobile browsers should not auto-zoom on focus.
 - `卡通风格` appears as a style card above `立即生成`, defaults to unchecked, and toggles a single left-side generated PNG icon between unchecked/checked states.
 - Home generate button has no shadow.
 - Home save reminder copy is `生成后请及时保存`.

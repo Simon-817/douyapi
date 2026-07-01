@@ -105,6 +105,11 @@ assert(!miniHtml.includes("style-selected-icon"), "Cartoon style must not render
 assert(!miniHtml.includes("style-option-icon"), "Cartoon style must not leave a separate unchecked icon visible.");
 assert(miniJs.includes('document.getElementById("cartoon-style-icon").src'), "Cartoon style toggle must swap the single icon source.");
 assert(!css.includes(".home-size-grid .custom-trigger {\n  color: #fff;"), "Custom size button must not be filled before selection.");
+const customSizeInputBlock = css.match(/\.custom-size-field \.custom-size\s*\{([^}]*)\}/);
+assert(
+  customSizeInputBlock && /font-size:\s*16px/.test(customSizeInputBlock[1]),
+  "Custom size input must be at least 16px to prevent mobile browser focus zoom."
+);
 assert(!miniHtml.includes("使用的颜色"), "Result page must remove used-colors display.");
 assert(!miniHtml.includes("palette-dots"), "Result page must remove palette dots display.");
 assert(miniHtml.includes('data-action="open-image-preview"'), "Result preview image must open a large-image viewer.");
