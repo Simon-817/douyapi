@@ -21,6 +21,9 @@ const css = read("styles.css");
 const miniJs = read("mini-program.js");
 const adminJs = read("admin.js");
 
+assert(miniHtml.includes('rel="icon"') && miniHtml.includes("assets/brand/app-icon.png"), "Mini program page must declare a PNG favicon.");
+assert(adminHtml.includes('rel="icon"') && adminHtml.includes("assets/brand/app-icon.png"), "Admin page must declare a PNG favicon.");
+
 for (const file of ["assets/brand/logo-lockup.png", "assets/mascot/generating.png", "assets/icons/upload.png"]) {
   assert(fs.existsSync(path.join(root, file)), `Missing required asset: ${file}`);
 }
@@ -96,6 +99,10 @@ assert(miniHtml.includes('aria-checked="false"'), "Cartoon style checkbox must d
 assert(miniHtml.includes("assets/icons/cartoon-checkbox-unchecked.png"), "Cartoon checkbox unchecked PNG must be referenced.");
 assert(miniHtml.includes("assets/icons/cartoon-checkbox-checked.png") || miniJs.includes("assets/icons/cartoon-checkbox-checked.png"), "Cartoon checkbox checked PNG must be referenced.");
 assert(miniJs.includes("function toggleCartoonStyle"), "Cartoon style checkbox must have a toggle handler.");
+assert(miniHtml.includes('id="cartoon-style-icon"'), "Cartoon style must use one switchable icon element.");
+assert(!miniHtml.includes("style-selected-icon"), "Cartoon style must not render a second selected icon on the right.");
+assert(!miniHtml.includes("style-option-icon"), "Cartoon style must not leave a separate unchecked icon visible.");
+assert(miniJs.includes('document.getElementById("cartoon-style-icon").src'), "Cartoon style toggle must swap the single icon source.");
 assert(!css.includes(".home-size-grid .custom-trigger {\n  color: #fff;"), "Custom size button must not be filled before selection.");
 assert(!miniHtml.includes("使用的颜色"), "Result page must remove used-colors display.");
 assert(!miniHtml.includes("palette-dots"), "Result page must remove palette dots display.");

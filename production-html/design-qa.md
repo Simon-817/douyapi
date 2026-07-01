@@ -28,10 +28,11 @@ Captured screens:
 
 Browser smoke results:
 
-- Mini program page loaded with 45 PNG references and 0 broken images.
+- Mini program page loaded with 44 PNG references and 0 broken images.
 - Mini program page has no `.phone`, `.phone-stage`, `.wechat-status`, or `.wechat-capsule` shell elements.
 - Mini program bottom navigation contains only `首页` and `我的`; old `生成` and `图纸` navigation entries and pages are removed.
 - Admin page loaded with 18 images and 0 broken images.
+- Mini program and admin pages declare the PNG favicon and produce no browser log errors in the smoke run.
 - Mini program viewport is a direct 390px mobile-browser page, not a phone mockup; checked `documentElement.scrollWidth = 390`.
 - Home top brand uses the mascot logo on the left, with app name and slogan on the right; the top gap matches the gap between the brand group and upload card.
 - Home app-name image and slogan text are reduced to 1/2 of the previous size.
@@ -41,7 +42,7 @@ Browser smoke results:
 - Home size presets are limited to `52格`, `78格`, and `104格`; default selection is `52格`.
 - The default `自定义` control uses the same unfilled style as inactive preset sizes.
 - Tapping `自定义` replaces the custom button with a text input; the cursor appears to the left of the visible `8~104格` hint and native number steppers are not used.
-- `卡通风格` appears as a style card above `立即生成`, defaults to unchecked, and toggles between generated PNG unchecked/checked states.
+- `卡通风格` appears as a style card above `立即生成`, defaults to unchecked, and toggles a single left-side generated PNG icon between unchecked/checked states.
 - Home generate button has no shadow.
 - Home save reminder copy is `生成后请及时保存`.
 - Home generate button is visible above the bottom navigation at 390px viewport.

@@ -1404,7 +1404,7 @@ body.mini-program-app {
 .style-card {
   min-height: 52px;
   display: grid;
-  grid-template-columns: 34px 1fr 28px;
+  grid-template-columns: 34px 1fr;
   align-items: center;
   gap: 8px;
   padding: 0 16px;
@@ -1423,19 +1423,10 @@ body.mini-program-app {
   color: var(--green-500);
 }
 
-.style-option-icon,
-.style-selected-icon {
+.style-icon {
   width: 30px;
   height: 30px;
   object-fit: contain;
-}
-
-.style-selected-icon {
-  opacity: 0;
-}
-
-.style-card.is-checked .style-selected-icon {
-  opacity: 1;
 }
 
 .home-generate-button {

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>豆芽Pi v1.0 小程序前端</title>
+  <link rel="icon" type="image/png" href="assets/brand/app-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="mini-program-app">
@@ -64,9 +65,8 @@
 
       <section class="style-options" aria-label="风格选择">
         <button id="cartoon-style-toggle" class="style-card" type="button" role="checkbox" aria-checked="false" data-action="toggle-cartoon-style" data-event="douya_cartoon_style_toggle">
-          <img class="style-option-icon" src="assets/icons/cartoon-checkbox-unchecked.png" alt="">
+          <img id="cartoon-style-icon" class="style-icon" src="assets/icons/cartoon-checkbox-unchecked.png" alt="">
           <span>卡通风格</span>
-          <img id="cartoon-style-icon" class="style-selected-icon" src="assets/icons/cartoon-checkbox-checked.png" alt="">
         </button>
       </section>
 
