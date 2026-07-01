@@ -108,6 +108,10 @@ assert(!miniHtml.includes("profile-count-card\">\n        <div>\n          <img"
 assert(!miniHtml.includes("home-hero"), "Home must remove the top AI promo area.");
 assert(miniHtml.includes("top-brand-row"), "Home logo/name/slogan must share one top brand row.");
 assert(miniHtml.includes('src="assets/brand/mascot-logo.png"') && miniHtml.includes("home-brand-icon"), "Home top brand must use the logo icon on the left.");
+assert(css.includes("padding: max(20px, env(safe-area-inset-top))"), "Home top brand must sit 20px from the top.");
+assert(css.includes(".home-brand {\n  padding: 0 8px 8px;"), "Home brand must not add extra top padding.");
+assert(css.includes(".home-logo") && css.includes("width: 56px"), "Home name logo must be reduced to half size.");
+assert(css.includes(".home-brand p") && css.includes("font-size: 8px"), "Home slogan must be reduced to half size.");
 assert(miniHtml.includes("assets/icons/upload-close.png") || miniJs.includes("assets/icons/upload-close.png"), "Uploaded preview must reference generated close PNG icon.");
 assert(miniJs.includes("function clearUpload"), "Uploaded preview close icon must clear the uploaded image.");
 assert(css.includes("aspect-ratio: 1 / 1"), "Upload dashed area must be 1:1.");

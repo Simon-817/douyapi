@@ -984,7 +984,7 @@ body.mini-program-app {
   max-width: 390px;
   min-height: 100dvh;
   margin: 0;
-  padding: max(18px, env(safe-area-inset-top)) 18px calc(96px + env(safe-area-inset-bottom));
+  padding: max(20px, env(safe-area-inset-top)) 18px calc(96px + env(safe-area-inset-bottom));
 }
 
 .mini-program-app .screen {
@@ -1003,7 +1003,7 @@ body.mini-program-app {
 }
 
 .home-brand {
-  padding: 12px 8px 8px;
+  padding: 0 8px 8px;
 }
 
 .top-brand-row {
@@ -1020,14 +1020,14 @@ body.mini-program-app {
 }
 
 .home-logo {
-  width: 112px;
+  width: 56px;
   display: block;
 }
 
 .home-brand p {
-  margin-top: 4px;
+  margin-top: 2px;
   color: #7A6654;
-  font-size: 16px;
+  font-size: 8px;
   font-weight: 700;
 }
 

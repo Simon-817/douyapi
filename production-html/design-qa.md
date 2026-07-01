@@ -33,7 +33,8 @@ Browser smoke results:
 - Mini program bottom navigation contains only `首页` and `我的`; old `生成` and `图纸` navigation entries and pages are removed.
 - Admin page loaded with 18 images and 0 broken images.
 - Mini program viewport is a direct 390px mobile-browser page, not a phone mockup; checked `documentElement.scrollWidth = 390`.
-- Home top brand uses the mascot logo on the left, with app name and slogan on the right.
+- Home top brand uses the mascot logo on the left, with app name and slogan on the right; the brand group starts 20px from the top.
+- Home app-name image and slogan text are reduced to 1/2 of the previous size.
 - Home top promo area `AI生成专属拼豆图纸` has been removed.
 - Home upload dashed area is a 1:1 square; uploaded images cover the square and show the generated close PNG in the top-right corner.
 - Home size title `选择拼豆尺寸` uses 16px text.
