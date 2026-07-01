@@ -1013,21 +1013,21 @@ body.mini-program-app {
 }
 
 .home-brand-icon {
-  width: 46px;
-  height: 46px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
   flex: 0 0 auto;
 }
 
 .home-logo {
-  width: 56px;
+  width: 70px;
   display: block;
 }
 
 .home-brand p {
   margin-top: 2px;
   color: #7A6654;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 }
 

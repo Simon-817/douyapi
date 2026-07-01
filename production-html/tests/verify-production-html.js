@@ -23,6 +23,7 @@ const adminJs = read("admin.js");
 
 assert(miniHtml.includes('rel="icon"') && miniHtml.includes("assets/brand/app-icon.png"), "Mini program page must declare a PNG favicon.");
 assert(adminHtml.includes('rel="icon"') && adminHtml.includes("assets/brand/app-icon.png"), "Admin page must declare a PNG favicon.");
+assert(miniHtml.includes("<title>豆芽Pi</title>"), "Mini program browser title must be only 豆芽Pi.");
 
 for (const file of ["assets/brand/logo-lockup.png", "assets/mascot/generating.png", "assets/icons/upload.png"]) {
   assert(fs.existsSync(path.join(root, file)), `Missing required asset: ${file}`);
@@ -117,8 +118,9 @@ assert(miniHtml.includes("top-brand-row"), "Home logo/name/slogan must share one
 assert(miniHtml.includes('src="assets/brand/mascot-logo.png"') && miniHtml.includes("home-brand-icon"), "Home top brand must use the logo icon on the left.");
 assert(css.includes("padding: 18px 18px calc(96px + env(safe-area-inset-bottom))"), "Home top brand spacing must match the gap above the upload card.");
 assert(css.includes(".home-brand {\n  padding: 0 8px 8px;"), "Home brand must not add extra top padding.");
-assert(css.includes(".home-logo") && css.includes("width: 56px"), "Home name logo must be reduced to half size.");
-assert(css.includes(".home-brand p") && css.includes("font-size: 8px"), "Home slogan must be reduced to half size.");
+assert(css.includes(".home-brand-icon") && css.includes("width: 58px") && css.includes("height: 58px"), "Home mascot logo must be enlarged by about one quarter.");
+assert(css.includes(".home-logo") && css.includes("width: 70px"), "Home name logo must be enlarged by about one quarter.");
+assert(css.includes(".home-brand p") && css.includes("font-size: 10px"), "Home slogan must be enlarged by about one quarter.");
 assert(miniHtml.includes("assets/icons/upload-close.png") || miniJs.includes("assets/icons/upload-close.png"), "Uploaded preview must reference generated close PNG icon.");
 assert(miniJs.includes("function clearUpload"), "Uploaded preview close icon must clear the uploaded image.");
 assert(css.includes("aspect-ratio: 1 / 1"), "Upload dashed area must be 1:1.");

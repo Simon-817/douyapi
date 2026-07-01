@@ -31,11 +31,12 @@ Browser smoke results:
 - Mini program page loaded with 44 PNG references and 0 broken images.
 - Mini program page has no `.phone`, `.phone-stage`, `.wechat-status`, or `.wechat-capsule` shell elements.
 - Mini program bottom navigation contains only `首页` and `我的`; old `生成` and `图纸` navigation entries and pages are removed.
+- Mini program browser title is `豆芽Pi`.
 - Admin page loaded with 18 images and 0 broken images.
 - Mini program and admin pages declare the PNG favicon and produce no browser log errors in the smoke run.
 - Mini program viewport is a direct 390px mobile-browser page, not a phone mockup; checked `documentElement.scrollWidth = 390`.
 - Home top brand uses the mascot logo on the left, with app name and slogan on the right; the top gap matches the gap between the brand group and upload card.
-- Home app-name image and slogan text are reduced to 1/2 of the previous size.
+- Home mascot logo, app-name image, and slogan text are enlarged by about 1/4 from the previous compact size.
 - Home top promo area `AI生成专属拼豆图纸` has been removed.
 - Home upload dashed area is a 1:1 square; uploaded images cover the square and show the generated close PNG in the top-right corner.
 - Home size title `选择拼豆尺寸` uses 16px text.
