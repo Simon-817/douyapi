@@ -36,6 +36,7 @@ Browser smoke results:
 - Home top brand uses the mascot logo on the left, with app name and slogan on the right.
 - Home top promo area `AI生成专属拼豆图纸` has been removed.
 - Home upload dashed area is a 1:1 square; uploaded images cover the square and show the generated close PNG in the top-right corner.
+- Home size title `选择拼豆尺寸` uses 16px text.
 - Home size presets are limited to `52格`, `78格`, and `104格`; default selection is `52格`.
 - The default `自定义` control uses the same unfilled style as inactive preset sizes.
 - Tapping `自定义` replaces the custom button with a text input; the cursor appears to the left of the visible `8~104格` hint and native number steppers are not used.

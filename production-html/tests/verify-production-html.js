@@ -111,7 +111,7 @@ assert(miniHtml.includes('src="assets/brand/mascot-logo.png"') && miniHtml.inclu
 assert(miniHtml.includes("assets/icons/upload-close.png") || miniJs.includes("assets/icons/upload-close.png"), "Uploaded preview must reference generated close PNG icon.");
 assert(miniJs.includes("function clearUpload"), "Uploaded preview close icon must clear the uploaded image.");
 assert(css.includes("aspect-ratio: 1 / 1"), "Upload dashed area must be 1:1.");
-assert(css.includes(".home-panel h2") && css.includes("font-size: 24px"), "Size heading must be 24px.");
+assert(css.includes(".home-panel h2") && css.includes("font-size: 16px"), "Size heading must be 16px.");
 assert(css.includes(".quota-label") && css.includes("font-size: 14px"), "Home quota labels must be 14px.");
 assert(css.includes(".quota-number") && css.includes("font-size: 18px"), "Home quota numbers must be 18px.");
 assert(css.includes(".home-generate-button") && css.includes("font-size: 16px"), "Generate button text must be 16px.");
