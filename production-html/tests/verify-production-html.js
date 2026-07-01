@@ -108,7 +108,7 @@ assert(!miniHtml.includes("profile-count-card\">\n        <div>\n          <img"
 assert(!miniHtml.includes("home-hero"), "Home must remove the top AI promo area.");
 assert(miniHtml.includes("top-brand-row"), "Home logo/name/slogan must share one top brand row.");
 assert(miniHtml.includes('src="assets/brand/mascot-logo.png"') && miniHtml.includes("home-brand-icon"), "Home top brand must use the logo icon on the left.");
-assert(css.includes("padding: max(20px, env(safe-area-inset-top))"), "Home top brand must sit 20px from the top.");
+assert(css.includes("padding: 18px 18px calc(96px + env(safe-area-inset-bottom))"), "Home top brand spacing must match the gap above the upload card.");
 assert(css.includes(".home-brand {\n  padding: 0 8px 8px;"), "Home brand must not add extra top padding.");
 assert(css.includes(".home-logo") && css.includes("width: 56px"), "Home name logo must be reduced to half size.");
 assert(css.includes(".home-brand p") && css.includes("font-size: 8px"), "Home slogan must be reduced to half size.");
@@ -121,6 +121,8 @@ assert(css.includes(".quota-number") && css.includes("font-size: 18px"), "Home q
 assert(css.includes(".home-generate-button") && css.includes("font-size: 16px"), "Generate button text must be 16px.");
 assert(miniHtml.includes("style-options") && miniHtml.includes("style-card"), "Cartoon style must use card option layout.");
 assert(!miniHtml.includes("profile-brand-row"), "Profile must remove top app name and illustration strip.");
+assert(!miniHtml.includes("profile-header"), "Profile must remove the top title area.");
+assert(!css.includes(".profile-header"), "Profile title area styles must be removed.");
 assert(css.includes(".profile-avatar") && css.includes("width: 74px") && css.includes("height: 74px"), "Profile avatar must be reduced to two-thirds size.");
 assert(css.includes(".profile-card strong") && css.includes("font-size: 18px"), "Profile nickname must be 18px.");
 assert(css.includes(".profile-count-card span") && css.includes("font-size: 14px"), "Profile count labels must be 14px.");

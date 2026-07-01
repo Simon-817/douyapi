@@ -984,7 +984,7 @@ body.mini-program-app {
   max-width: 390px;
   min-height: 100dvh;
   margin: 0;
-  padding: max(20px, env(safe-area-inset-top)) 18px calc(96px + env(safe-area-inset-bottom));
+  padding: 18px 18px calc(96px + env(safe-area-inset-bottom));
 }
 
 .mini-program-app .screen {
@@ -1491,21 +1491,6 @@ body.mini-program-app {
 
 .two-tabbar .tab-item.is-active {
   background: rgba(234, 247, 232, .72);
-}
-
-.profile-screen {
-  padding-top: 16px;
-}
-
-.profile-header {
-  position: relative;
-  min-height: 66px;
-  text-align: center;
-}
-
-.profile-header h1 {
-  color: var(--text-primary);
-  font-size: 28px;
 }
 
 .profile-card {
